@@ -1,0 +1,38 @@
+﻿<Window x:Class="MQuoter.Settings"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MQuoter"
+        mc:Ignorable="d"
+        Title="Ustawienia" Height="220" Width="400" Icon="img/MQuoter.png" ResizeMode="NoResize" ShowInTaskbar="False" WindowStartupLocation="CenterOwner">
+    <Grid >
+        <Grid.Background>
+            <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.MenuBarColorKey}}"/>
+        </Grid.Background>
+
+        <GroupBox Margin="10,5,10,85" BorderBrush="Black">
+            <GroupBox.Header>
+                Kolory
+            </GroupBox.Header>
+            <Grid>
+                <TextBlock Text="Kolor ramki: " HorizontalAlignment="Left" Margin="5,0,0,0" VerticalAlignment="Center"/>
+                <ComboBox x:Name="xe_DDList" Height="25" Width="265" HorizontalAlignment="Right" Margin="0,16,5,16" ItemsSource="{Binding Source={StaticResource colorPropertiesOdp}}" SelectedValuePath="Name" SelectionChanged="em_OnSelectionChange">
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock  Text="{Binding Name}"/>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+            </Grid>
+        </GroupBox>
+
+        <Rectangle x:Name="xe_Rectangle" Width="200" Height="20" VerticalAlignment="Bottom" HorizontalAlignment="Left" Margin="30,0,0,30"/>
+
+        <Button Content="Domyślne" Width="125" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,45" Click="em_Default_OnClick"/>
+
+
+        <Button Content="Zastosuj" IsDefault="True" Width="125" Height="35" VerticalAlignment="Bottom" HorizontalAlignment="Right" Margin="0,0,5,5" Click="em_Apply_OnClick"/>
+
+    </Grid>
+</Window>

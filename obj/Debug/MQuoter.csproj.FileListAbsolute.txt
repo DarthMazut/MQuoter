@@ -1,0 +1,40 @@
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\bin\Debug\MQuoter.exe.config
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\bin\Debug\MQuoter.exe
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\bin\Debug\MQuoter.pdb
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MainWindow.g.cs
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\App.g.cs
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter_MarkupCompile.cache
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter_MarkupCompile.lref
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\App.baml
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MainWindow.baml
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\ResourceDictionary.baml
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.g.resources
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.Properties.Resources.resources
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.csproj.GenerateResource.Cache
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.exe
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.pdb
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\MQuoter.csprojResolveAssemblyReference.cache
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\Settings.g.cs
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\Settings.baml
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\About.g.cs
+C:\Users\Alien\Desktop\C++\visual MS\nowy1\MQuoter\obj\Debug\About.baml
+C:\Users\Alien\Desktop\MQuoter\bin\Debug\MQuoter.exe.config
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.exe
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.pdb
+C:\Users\Alien\Desktop\MQuoter\bin\Debug\MQuoter.exe
+C:\Users\Alien\Desktop\MQuoter\bin\Debug\MQuoter.pdb
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.csprojResolveAssemblyReference.cache
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\About.g.cs
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MainWindow.g.cs
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\Settings.g.cs
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\App.g.cs
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter_MarkupCompile.cache
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter_MarkupCompile.lref
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\App.baml
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\About.baml
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MainWindow.baml
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\ResourceDictionary.baml
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\Settings.baml
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.g.resources
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.Properties.Resources.resources
+C:\Users\Alien\Desktop\MQuoter\obj\Debug\MQuoter.csproj.GenerateResource.Cache

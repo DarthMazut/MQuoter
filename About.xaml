@@ -1,0 +1,32 @@
+﻿<Window x:Class="MQuoter.About"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MQuoter"
+        mc:Ignorable="d"
+        Title="O Programie" Height="300" Width="500" ResizeMode="NoResize" Background="{DynamicResource {x:Static SystemColors.MenuBrushKey}}" Icon="img/MQuoter.png" WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="5*"/>
+        </Grid.ColumnDefinitions>
+
+        <Image Grid.Column="1" Width="60" Height="60" RenderOptions.BitmapScalingMode="HighQuality" Source="img/MQuoter.png" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,30,0,0">
+            <Image.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="Resetuj statystyki" Click="em_OnResetClick"/>
+                </ContextMenu>
+            </Image.ContextMenu>
+        </Image>
+
+        <ScrollViewer Margin="10">
+            <TextBlock x:Name="xe_MainText" TextWrapping="Wrap" Text="{DynamicResource AboutInfo}" FontFamily="Segoe Print" FontSize="14" TextAlignment="Justify" Margin="5" Foreground="Black"/>
+        </ScrollViewer>
+
+        <TextBlock x:Name="xe_appInfo" Grid.Column="1" HorizontalAlignment="Center" Margin="0,45,0,0" TextWrapping="Wrap" Text="{DynamicResource AboutVersion}" VerticalAlignment="Center" FontFamily="Times New Roman" FontSize="14" TextAlignment="Center"/>
+
+        <Button x:Name="xe_button_OK" Content="Rozumiem, super! ☺" Grid.Column="1" HorizontalAlignment="Right" Margin="0,0,10,10" VerticalAlignment="Bottom" Width="180" Height="40" FontSize="16" Click="em_OK_OnClick"/>
+
+    </Grid>
+</Window>

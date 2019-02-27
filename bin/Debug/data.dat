@@ -1,0 +1,17 @@
+#MQUOTER PROPER FILE#
+
+@Mysh * Red
+[Ten cytat jest czerwony]
+
+@Mysh * White
+[Ten cytat jest biały]
+
+@Mysh * RND
+[Ten cytat ma losowy kolor]
+
+@Mysh * PaleVioletRed
+[Ten cytat
+Jest w dwóch linijkach]
+
+// Jesli checesz dodac cytat 'jego' uzyj okreslenia '@Mis'.
+

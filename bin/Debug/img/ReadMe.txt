@@ -1,0 +1,1 @@
+Past a "bg.jpg" file here and application will use that image as a background.

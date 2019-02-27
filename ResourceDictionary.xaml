@@ -1,0 +1,298 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:MQuoter"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+    <system:String x:Key="ApplicationTitle">MQuoter - cytaty jego i jej</system:String>
+    <system:String x:Key="TitleBarButtonClose">Zamknij</system:String>
+    <system:String x:Key="TitleBarButtonMaximize">Maksymalizuj</system:String>
+    <system:String x:Key="TitleBarButtonMinimize">Minimalizuj</system:String>
+    <system:String x:Key="TitleBarButtonRestore">Przywróć w dół</system:String>
+    <system:String x:Key="TitleBarButtonHelp">Pomoc</system:String>
+    <system:String x:Key="TitleBarButtonSettings">Ustawienia</system:String>
+    <system:String x:Key="ToolTipMysh">Cytat jej</system:String>
+    <system:String x:Key="ToolTipMis">Cytat jego</system:String>
+    <system:String x:Key="ToolTipClear">Wyczyść cytat</system:String>
+    <system:String x:Key="ToolTipCopy">Kopiuj cytat</system:String>
+    <system:String x:Key="ToolTipCursor">Zmień kursor</system:String>
+    <system:String x:Key="ToolTipRead">Przeczytaj cytat</system:String>
+    <system:String x:Key="ToolTipStats">Pokaż statystyki</system:String>
+    <system:String x:Key="NoQuotesMis">On nie posiada jeszcze żadnych cytatów :(</system:String>
+    <system:String x:Key="NoQuotesMysh">Ona nie posiada jeszcze żadnych cytatów :(</system:String>
+
+    <system:String x:Key="NrQuotesMis">Liczba cytatów jego:</system:String>
+    <system:String x:Key="NrQuotesMysh">Liczba cytatów jej:</system:String>
+    <system:String x:Key="NrAppStartsTime">Aplikacja była uruchamiana: </system:String>
+    
+    <system:String x:Key="AboutVersion" xml:space="preserve">MQuoter - cytaty jego i jej
+Wesja 1.0
+Wszelkie prawa zastrzeżone 
+© 2018
+    </system:String>
+
+    <system:String x:Key="AboutInfo" xml:space="preserve">Niniejsza aplikacja została wyczarowana przez Pana Misia Czarodzieja dla Ślicznej Pani Myszki. Aplikacja wykorzystuje odpowiednio sformatowany plik "data.dat", który powinien znajdować się w tym samym folderze co plik *.exe. Z pliku wczytywane są cytaty i dzielone na cytaty jego oraz jej. Po kliknięciu na ikonę zostanie wyświetlony odpowiedni cytat. Aplikacja daje dodatkowo możliwość kopiowania cytatu do schowka, zmiany kursora na takie słodkiego miśka xD oraz odczytywania cytatu za pomocą wbudowanego w system Windows syntezatora mowy (niestety umie on czytać tylko po angielsku).
+        
+Jeśli chcesz zmienić tło aplikacji to utwórz folder "img" i wklej do niego plik *.jpg o nazwie "bg". 
+        
+Ikonki do aplikacja pochodzą ze strony "http://www.iconarchive.com".
+    </system:String>
+
+    <system:String x:Key="ClearText" xml:space="preserve">
+MQuoter - cytay jego i jej.
+        
+Naciśnij ikonę myszy lub miśka aby otrzymać losowy cytat.
+    </system:String>
+
+    
+    <ObjectDataProvider MethodName="GetType" ObjectType="{x:Type system:Type}" x:Key="colorsTypeOdp">
+        <ObjectDataProvider.MethodParameters>
+            <system:String>
+                System.Windows.Media.Colors, PresentationCore,
+                Version=3.0.0.0, Culture=neutral, 
+                PublicKeyToken=31bf3856ad364e35
+            </system:String>
+        </ObjectDataProvider.MethodParameters>
+    </ObjectDataProvider>
+    
+    <ObjectDataProvider ObjectInstance="{StaticResource colorsTypeOdp}" MethodName="GetProperties" x:Key="colorPropertiesOdp"/>
+
+
+
+    <RadialGradientBrush x:Key="MouseBackgroundHoover">
+        <GradientStop Color="#FFFFFF00" Offset="0"/>
+        <GradientStop Offset="1"/>
+        <GradientStop Color="#BFFFFF00" Offset="0.75"/>
+    </RadialGradientBrush>
+
+    <RadialGradientBrush x:Key="MouseBackground">
+        <GradientStop Color="White" Offset="0"/>
+        <GradientStop Offset="1"/>
+        <GradientStop Color="#BFFFFFFF" Offset="0.75"/>
+    </RadialGradientBrush>
+
+
+    <SolidColorBrush x:Key="QuoteDefaultColor" Color="White" />
+
+    <Style x:Key="TitleBarButtons" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="MinWidth" Value="24" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Padding" Value="3,0,3,0" />
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Width" Value="24"/>
+
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="120" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="24" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+
+            </Trigger>
+        </Style.Triggers>
+
+    </Style>
+
+    <Style x:Key="TitleBarClose" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="PaleVioletRed"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonClose}" />
+                <Setter Property="Width" Value="24"/>
+
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="90" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="24" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="X" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleBarMaximize" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonMaximize}" />
+
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="[ ]" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleBarRestore" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonRestore}" />
+
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="[ ]" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleBarMinimize" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonMinimize}" />
+                <Setter Property="Width" Value="24"/>
+
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="90" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="24" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="_" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleBarHelp" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonHelp}" />
+                <Setter Property="Width" Value="24"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="?" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="TitleBarHelpNoAnim" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="16" />
+        <Setter Property="MinWidth" Value="24" />
+        <Setter Property="Foreground" Value="Black" />
+        <Setter Property="TextAlignment" Value="Center" />
+        <Setter Property="Padding" Value="3,0,3,0" />
+        <Setter Property="Background" Value="White"/>
+        <Setter Property="Text" Value="{StaticResource TitleBarButtonHelp}" />
+        <Setter Property="Width" Value="90"/>
+    </Style>
+
+    <Style x:Key="TitleBarSettings" TargetType="TextBlock" BasedOn="{StaticResource TitleBarButtons}">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="Text" Value="{StaticResource TitleBarButtonSettings}" />
+                <Setter Property="Width" Value="24"/>
+
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="90" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <DoubleAnimation Duration="0:0:0.25" To="24" Storyboard.TargetProperty="Width" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Text" Value="*" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="MouseImage" TargetType="Border">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" Value="{StaticResource MouseBackgroundHoover}" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="false">
+                <Setter Property="Background" Value="{StaticResource MouseBackground}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="SmallButton" TargetType="Border">
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter Property="BorderBrush" Value="Yellow" />
+                <Setter Property="BorderThickness" Value="2" />
+                <Setter Property="Background" Value="#3FFFFF00" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="ToolTipStyle" TargetType="ToolTip">
+        <Setter Property="Background" Value="#44000000"/>
+        <Setter Property="Foreground" Value="AliceBlue"/>
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="FontFamily" Value="Segoe Print" />
+        <Setter Property="FontSize" Value="12" />
+        <Setter Property="FontWeight" Value="Bold" />
+    </Style>
+
+    <Style x:Key="QuoteBox" TargetType="Border">
+        <Setter Property="Background" Value="#7F000000" />
+
+        <Style.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Trigger.EnterActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.25" To="#E0000000" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.EnterActions>
+                <Trigger.ExitActions>
+                    <BeginStoryboard>
+                        <Storyboard>
+                            <ColorAnimation Duration="0:0:0.25" To="#7F000000" Storyboard.TargetProperty="(Border.Background).(SolidColorBrush.Color)" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </Trigger.ExitActions>
+
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+</ResourceDictionary>
